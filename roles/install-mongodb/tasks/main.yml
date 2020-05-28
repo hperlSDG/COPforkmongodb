@@ -20,7 +20,7 @@
 
 - name: 'Install pip if not installed'
   command: easy_install pip
-  when: pip_check != '/usr/bin/pip'
+  when: pip_check != '/bin/pip'
 
 - name: 'Install pymongo'
   command: pip install pymongo
