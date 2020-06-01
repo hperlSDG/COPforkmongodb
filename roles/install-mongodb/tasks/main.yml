@@ -13,14 +13,5 @@
     name: mongod
     state: started
 
-- name: 'Check if pip is installed'
-  command: which pip
-  register: pip_check
-  ignore_errors: yes
-
-- name: 'Install pip if not installed'
-  command: easy_install pip
-  when: pip_check != '/bin/pip'
-
 - name: 'Install pymongo'
   command: pip install pymongo
